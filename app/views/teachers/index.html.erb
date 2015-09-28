@@ -1,0 +1,12 @@
+<h2>A list of all <%= teachers.length %> Teachers</h2>
+
+<ul>
+  <% teachers.each do |teacher| %>
+    <li><%= teacher.id %> <%= teacher.name %> </li>
+  <% end %>
+</ul>
+
+<%= link_to('More on next page >', root_path(page: page + 1)) %>
+
+
+

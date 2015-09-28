@@ -1,8 +1,9 @@
 class TeachersController < ApplicationController
+
   def index
-    teachers = Teacher.new
-    page  = (params[:page]  ||  0).to_i= Wit.limit(10).offset(page * 10)
-    render locals: { teachers: teachers }
+    page  = (params[:page]  ||  0).to_i
+    teachers = Teacher.limit(25).offset(page * 25)
+    render locals: { teachers: teachers, page: page }
   end
 
   def show
