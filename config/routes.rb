@@ -1,4 +1,16 @@
 Rails.application.routes.draw do
+  get 'schools/index'
+
+  get 'schools/show'
+
+  get 'schools/new'
+
+  get 'schools/create'
+
+  get 'schools/update'
+
+  get 'schools/destroy'
+
   resources :students
   resources :courses
   resources :teachers
