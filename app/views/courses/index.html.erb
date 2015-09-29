@@ -1,0 +1,13 @@
+<h1>A list of all courses</h1>
+
+<ul>
+  <% courses.each do |course| %>
+  <li><%= link_to(course.name, courses_path(courses)) %></li>
+ <% end %>
+
+
+<%= link_to('Go to teachers index', teachers_path) %>
+<%= link_to('Schools index', schools_path) %>
+
+
+<%= link_to("More on next page >", root_path(page: page + 1)) %>
