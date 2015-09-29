@@ -1,0 +1,7 @@
+<h2><%= teacher.name %></h2>
+
+<p> Students :
+<%= teacher.students.each do |student| %>
+  <%= student.name %>
+  <% end %>
+  </p>
