@@ -1,23 +1,36 @@
 <h2><%= school.name %></h2>
 
-<p> Students :
-<% school.students.each do |student| %>
-  <%= student.name %><br>
-  <% end %>
-  Number of students: <%= school.students.count %>
-  </p>
+<h3> School stats :</h3>
 
-  <p> Teachers :
-<% school.teachers.each do |teacher| %>
-  <%= teacher.name %><br>
+<table class="table table-hover">
+    <th> Student name </th>
+      <% school.students.each do |student| %>
+    <tr>
+      <td><%= student.name %></td>
+    </tr>
   <% end %>
-  Number of teachers: <%= school.teachers.count %>
-  </p>
 
-  <p> Courses :
-<% school.courses.each do |course| %>
-    <%= course.name %><br>
-<% end %>
-  Number of courses: <%= school.courses.count %>
-  </p>
+    <tr>
+      <th> Teacher name </th>
+    </tr>
+      <% school.teachers.each do |teacher| %>
+    <tr>
+      <td><%= teacher.name %></td>
+    </tr>
+  <% end %>
+
+    <tr>
+      <th> Course name </th>
+    </tr>
+      <% school.courses.each do |course| %>
+    <tr>
+      <%= course.name %><br>
+    </tr>
+  <% end %>
+</table>
+
+  <p>Number of students: <%= school.students.count %></p>
+  <p>Number of teachers: <%= school.teachers.count %></p>
+  <p>Number of courses: <%= school.courses.count %></p>
+
 

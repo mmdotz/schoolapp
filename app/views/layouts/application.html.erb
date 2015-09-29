@@ -13,7 +13,13 @@
 <%= yield %>
 </body>
 
-<footer class = "navbar navbar-default navbar-bottom" role = "navigation">
+<nav>
+  <ul class="pager">
+    <li><%= link_to('Home', root_path) %></li>
+  </ul>
+</nav>
+
+<footer class="navbar navbar-default navbar-bottom" role = "navigation">
 created by @mmdotz
 </footer>
 </html>
