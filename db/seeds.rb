@@ -7,20 +7,24 @@
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
 40.times do
-  school = School.create({
-    name:   Faker::University.name
-    })
-  teacher = Teacher.create({
-   name:    Faker::Name.name,
-   school_id: school.id
-   })
-  student = Student.create({
-   name:    Faker::Name.name,
-   teacher_id: teacher.id
-    })
-  course = Course.create({
-    name:   Faker::Company.buzzword,
-    teacher_id: teacher.id
-    })
+  school = School.create({ name: Faker::University.name })
 
+  [1, 2, 3, 4].sample.times do
+    teacher = Teacher.create({
+      name:      Faker::Name.name,
+      school_id: school.id
+    })
+    [7, 8, 9, 10].sample.times do
+      Student.create({
+        name:    Faker::Name.name,
+        teacher_id: teacher.id
+      })
+    end
+    [1, 2, 3].sample.times do
+      Course.create({
+        name:   Faker::Company.buzzword,
+        teacher_id: teacher.id
+      })
+    end
+  end
 end
