@@ -1,23 +1,23 @@
 <h2><%= school.name %></h2>
 
 <p> Students :
-<%= school.students.each do |student| %>
-  <%= "#{student.name}" %><br>
+<% school.students.each do |student| %>
+  <%= student.name %><br>
   Number of students: <%= school.students.count %>
   <% end %>
   </p>
 
   <p> Teachers :
-<%= school.teachers.each do |teacher| %>
-  <%= "#{teacher.name}" %><br>
+<% school.teachers.each do |teacher| %>
+  <%= teacher.name %><br>
   Number of teachers: <%= school.teachers.count %>
   <% end %>
   </p>
 
   <p> Courses :
-<%= school.courses.each do |course| %>
-  <%= "#{course.name}" %><br>
+<% school.courses.each do |course| %>
+    <%= course.name %><br>
   Number of courses: <%= school.courses.count %>
-  <% end %>
+<% end %>
   </p>
 

@@ -9,6 +9,6 @@
 <%= link_to('Teachers index', teachers_path) %>
 <%= link_to('Schools index', schools_path) %>
 
-<%= link_to("< Previous page" , courses_path(page: page - 1)) unless page < 0 %>
-<%= link_to("More on next page >", courses_path(page: page + 1)) %>
+  <%= link_to("< Previous page" , courses_path(page: page - 1)) unless page < 0 %>
+  <%= link_to("More on next page >", courses_path(page: page + 1)) %>
 
