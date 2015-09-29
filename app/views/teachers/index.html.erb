@@ -2,11 +2,9 @@
 
 <ul>
   <% teachers.each do |teacher| %>
-    <li><%= teacher.id %> <%= teacher.name %> </li>
+    <li><%= teacher.name %> </li>
   <% end %>
 </ul>
 
+
 <%= link_to('More on next page >', root_path(page: page + 1)) %>
-
-
-
