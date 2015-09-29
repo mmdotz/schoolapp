@@ -1,12 +1,19 @@
 <h1>A list of all schools</h1>
-<ul>
-  <% schools.each do |school| %>
-    <li><%= link_to( school.name, school_path(school)) %> </li>
-  <% end %>
-</ul>
 
-<%= link_to('Teachers index', teachers_path) %>
-<%= link_to('Courses index', courses_path) %>
+
+  <ul class="list-group">
+    <% schools.each do |school| %>
+      <li class="list-group-item"><%= link_to( school.name, school_path(school)) %> </li>
+    <% end %>
+  </ul>
+
+<nav>
+  <ul class="pager">
+    <li><%= link_to('Teachers index', teachers_path) %></li>
+    <li><%= link_to('Courses index', courses_path) %></li>
+  </ul>
+</nav>
+
 
 <!-- offset -->
 <%= link_to("< Previous page" , schools_path(page: page - 1)) unless page < 0 %>

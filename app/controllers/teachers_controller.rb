@@ -10,7 +10,5 @@ class TeachersController < ApplicationController
     teacher = Teacher.find(params[:id])
     render locals: { teacher: teacher }
   end
-
-
-
 end
+[]

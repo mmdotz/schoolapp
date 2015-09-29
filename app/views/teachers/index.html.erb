@@ -1,16 +1,21 @@
 <h2>Teachers</h2>
 
-<ul>
+
+<ul class="list-group">
   <% teachers.each do |teacher| %>
-  <li><%= link_to(teacher.name, teacher_path(teacher)) %></li>
+  <li class="list-group-item"><%= link_to(teacher.name, teacher_path(teacher)) %></li>
  <% end %>
 </ul>
 
-<%= link_to('School index', schools_path) %>
-<%= link_to('Courses index', courses_path) %>
+
+
+<nav>
+  <ul class="pager">
+    <li><%= link_to('School index', schools_path) %></li>
+    <li><%= link_to('Courses index', courses_path) %></li>
+  </ul>
+</nav>
 
 
 <%= link_to("< Previous page" , root_path(page: page - 1)) unless page < 0 %>
 <%= link_to('More on next page >', root_path(page: page + 1)) if teachers.size >= 25  %>
-
-

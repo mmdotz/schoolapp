@@ -1,13 +1,17 @@
 <h1>A list of all courses</h1>
 
-<ul>
+<ul class="list-group">
   <% courses.each do |course| %>
-  <li><%= link_to(course.name, courses_path(courses)) %></li>
+  <li class="list-group-item"><%= link_to(course.name, courses_path(courses)) %></li>
  <% end %>
 
+<nav>
+  <ul class="pager">
+    <li><%= link_to('Teachers index', teachers_path) %></li>
+    <li><%= link_to('Schools index', schools_path) %></li>
+  </ul>
+</nav>
 
-<%= link_to('Teachers index', teachers_path) %>
-<%= link_to('Schools index', schools_path) %>
 
   <%= link_to("< Previous page" , courses_path(page: page - 1)) unless page < 0 %>
   <%= link_to("More on next page >", courses_path(page: page + 1)) %>
