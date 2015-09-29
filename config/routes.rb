@@ -5,6 +5,11 @@ Rails.application.routes.draw do
   resources :teachers
   resources :schools
 
+
+  get     '/teachers/:id/student', to: 'teachers#show'
+  #try customname per Justin:
+  # match 'exit' => 'sessions#destroy', :as => :logout
+
   root   'teachers#index'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

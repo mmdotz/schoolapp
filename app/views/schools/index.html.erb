@@ -1,9 +1,9 @@
 <h1>A list of all schools</h1>
 <ul>
   <% schools.each do |school| %>
-    <li><a href= "/schools/"><%= school.name %></a> </li>
+    <li><%= link_to( school.name, school_path(school)) %> </li>
   <% end %>
 </ul>
 
 
-<%= link_to('More on next page >', root_path(page: page + 1)) %>
+<%= link_to("More on next page #{schools.size} >", root_path(page: page + 1)) %>
