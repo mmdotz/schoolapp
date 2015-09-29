@@ -6,8 +6,11 @@
  <% end %>
 </ul>
 
-<%= link_to('Go to school index', schools_path) %>
+<%= link_to('School index', schools_path) %>
+<%= link_to('Courses index', courses_path) %>
 
-<%= link_to('More on next page >', root_path(page: page + 1))  %>
+
+<%= link_to("< Previous page" , root_path(page: page - 1)) unless page < 0 %>
+<%= link_to('More on next page >', root_path(page: page + 1)) if teachers.size >= 25  %>
 
 

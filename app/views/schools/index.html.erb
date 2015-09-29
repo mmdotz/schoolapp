@@ -5,8 +5,9 @@
   <% end %>
 </ul>
 
-<%= link_to('Go to teachers index', teachers_path) %>
+<%= link_to('Teachers index', teachers_path) %>
 <%= link_to('Courses index', courses_path) %>
 
-
-<%= link_to("More on next page #{schools.size} >", root_path(page: page + 1)) %>
+<!-- offset -->
+<%= link_to("< Previous page" , schools_path(page: page - 1)) unless page < 0 %>
+<%= link_to("More on next page >", schools_path(page: page + 1)) if schools.size >= 25 %>

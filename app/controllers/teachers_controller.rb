@@ -7,9 +7,8 @@ class TeachersController < ApplicationController
   end
 
   def show
-    students = Student.all
     teacher = Teacher.find(params[:id])
-    render locals: { teacher: teacher, students: students }
+    render locals: { teacher: teacher }
 
   end
 

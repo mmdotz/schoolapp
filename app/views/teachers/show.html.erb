@@ -2,16 +2,15 @@
 
 <p> Students :
 <%= teacher.students.each do |student| %>
-  <%= student.name %>
-<!--   <%# students.count %>
- -->  <% end %>
+  <%= student.name %><br>
+  Number of students: <%= teacher.students.count %>
+ <% end %>
 
   </p>
 
   <p> Courses :
 <%= teacher.courses.each do |course| %>
-  <%= course.name %>
-  <!-- <%# courses.count %> -->
+  <%= course.name %><br>
   <% end %>
   </p>
 
