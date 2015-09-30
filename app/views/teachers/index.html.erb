@@ -17,5 +17,5 @@
 </nav>
 
 
-<%= link_to("< Previous page" , root_path(page: page - 1)) unless page < 0 %>
-<%= link_to('More on next page >', root_path(page: page + 1)) if teachers.size >= 25  %>
+<%= link_to("< Previous page" , teachers_path(page: page - 1)) unless page < 0 %>
+<%= link_to('More on next page >', teachers_path(page: page + 1)) if teachers.size >= 25  %>

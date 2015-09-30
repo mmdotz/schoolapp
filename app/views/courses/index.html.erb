@@ -1,8 +1,8 @@
-<h1>A list of all courses</h1>
+<h1>Courses</h1>
 
 <ul class="list-group">
   <% courses.each do |course| %>
-  <li class="list-group-item"><%= link_to(course.name, courses_path(courses)) %></li>
+  <li class="list-group-item"><%= course.id %>.) <%= link_to(course.name, courses_path(courses)) %></li>
  <% end %>
 
 <nav>

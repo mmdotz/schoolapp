@@ -3,29 +3,49 @@
 <h3> School stats :</h3>
 
 <table class="table table-hover">
-    <th> Student name </th>
+  <thead>
+    <th> Student ID </th>
+    <th> Student </th>
+    <th> Course teacher </th>
+    <th> School course </th>
+  </thead>
       <% school.students.each do |student| %>
+  <tbody>
     <tr>
+      <td><%= student.id %></td>
       <td><%= student.name %></td>
+      <td><%= student.teacher.name %></td>
+      <td><%= school.courses.name %></td>
     </tr>
+    </tbody>
   <% end %>
+</table>
 
-    <tr>
-      <th> Teacher name </th>
-    </tr>
-      <% school.teachers.each do |teacher| %>
+<table class="table table-hover">
+  <thead>
+    <th> Teacher</th>
+    <th> Course </th>
+  </thead>
+    <% school.teachers.each do |teacher| %>
+  <tbody>
     <tr>
       <td><%= teacher.name %></td>
+      <td><%= teacher.courses.name %></td>
     </tr>
+  </tbody>
   <% end %>
+</table>
 
+<table class="table table-hover">
+  <thead>
+    <th> Course name </th>
+  </thead>
+    <% school.courses.each do |course| %>
+  <tbody>
     <tr>
-      <th> Course name </th>
+      <%= course.name %>
     </tr>
-      <% school.courses.each do |course| %>
-    <tr>
-      <%= course.name %><br>
-    </tr>
+  <tbody>
   <% end %>
 </table>
 

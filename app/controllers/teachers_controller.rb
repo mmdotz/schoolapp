@@ -11,4 +11,4 @@ class TeachersController < ApplicationController
     render locals: { teacher: teacher }
   end
 end
-[]
+
